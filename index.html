@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fastient</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Fastient</h1>
+    </header>
+    <main>
+      <div class="control-panel">
+        <select id="targetSelect">
+          <option value="16">16 Hours</option>
+          <option value="18">18 Hours</option>
+          <option value="24">24 Hours</option>
+        </select>
+        <button id="startButton">Start Fast</button>
+        <button id="stopButton" disabled>Stop Fast</button>
+      </div>
+      <div id="circularProgress">
+        <svg>
+          <circle cx="50%" cy="50%" r="45%"></circle>
+          <circle cx="50%" cy="50%" r="45%" id="progressCircle"></circle>
+        </svg>
+        <div id="progressText">0%</div>
+      </div>
+      <div id="journey">
+        <h2>Fasting Journey</h2>
+        <ul id="journeyList"></ul>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
